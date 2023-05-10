@@ -2,10 +2,67 @@
   "music": [
     {
      "id":1,
-     "album": "Foreword-EP",
-     "artist": "Tori Kelly",
+     "song":"This Is",
+     "album": "Heart on My Sleeve",
+     "artist": "Ella Mai",
+     "genre": "R&B",
+     "lyrics":"This is, something that can get every bit of my time."
+    },
+    {
+     "id":2,
+     "song": "We Belong Together",
+     "album": "The Emancipation on Mimi",
+     "artist": "Mariah Carey",
+     "genre": "R&B",
+     "lyrics":"When you left I lost a part of me, it's still so hard to believe"
+    },
+    {
+     "id":3,
+     "song": "Run It!",
+     "album": "Chris Brown",
+     "artist": "Chris Brown",
      "genre": "Pop",
-     "lyrics": "not yet availible"
+     "lyrics":"let me see if you can run it, run it. Girl, indeed I can run it, run it."
+    },
+    {
+     "id":4,
+     "song": "easy On Me",
+     "album": "30",
+     "artist": "Adele",
+     "genre": "Pop",
+     "rating":"Go easy on me, baby."
+    },
+    {
+     "id":5,
+     "song": "Fix You",
+     "album": "X&Y",
+     "artist": "Coldplay",
+     "genre": "Alternative",
+     "rating":"When you try your best but you don't succeed"
+    },
+    {
+     "id":6,
+     "song": "Unsteady",
+     "album": "VHS",
+     "artist": "X Ambassadors",
+     "genre": "Alternative",
+     "rating":"Hold on to me, cause I'm a little unsteady."
+    },
+    {
+     "id":7,
+     "song": "Dear Mama",
+     "album": "Me Against the World",
+     "artist": "Tupac",
+     "genre": "Rap",
+     "rating":"Lady, don't you know we love you."
+    },
+    {
+     "id":8,
+     "song": "No Role Modelz",
+     "album": "2014 Forest Hills Drive",
+     "artist": "J.Cole",
+     "genre": "Rap",
+     "rating":"Don't save her, she don't wanna be saved."
     }
  ]
 }
