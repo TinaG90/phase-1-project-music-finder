@@ -8,13 +8,13 @@ fetch("http://localhost:3000/music")
 
 function createSongCard(song){
     console.log(song)
-//    let card = document.createElement('div');
-//    card.classList.add('card')
+   let card = document.createElement('div');
+   card.classList.add('card')
+   
+   let img = document.createElement('img')
+   img.src = song.image;
+   img.classList.add('album-cover');
 
-//    let img = document.createElement('img')
-//    img.src = music.image;
-//    img.classList.add('album-cover');
-
-//    card.append(img)
-//    document.getElementById
+   card.append(img)
+   document.getElementById
 }
