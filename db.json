@@ -6,7 +6,7 @@
      "album": "Heart on My Sleeve",
      "artist": "Ella Mai",
      "genre": "R&B",
-     "lyrics":"This is, something that can get every bit of my time.",
+     "lyric":"This is, something that can get every bit of my time.",
      "image": "https://upload.wikimedia.org/wikipedia/en/e/e9/Ella_Mai_-_Heart_on_My_Sleeve.png"
     },
     {
@@ -15,7 +15,7 @@
      "album": "The Emancipation on Mimi",
      "artist": "Mariah Carey",
      "genre": "R&B",
-     "lyrics":"When you left I lost a part of me, it's still so hard to believe",
+     "lyric":"When you left I lost a part of me, it's still so hard to believe",
      "image":"https://upload.wikimedia.org/wikipedia/en/5/5a/Mariah_Carey_The_Emancipation_of_Mimi.png"
     },
     {
@@ -24,7 +24,7 @@
      "album": "Chris Brown",
      "artist": "Chris Brown",
      "genre": "Pop",
-     "lyrics":"let me see if you can run it, run it. Girl, indeed I can run it, run it.",
+     "lyric":"let me see if you can run it, run it. Girl, indeed I can run it, run it.",
      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Chris_brown.jpg/220px-Chris_brown.jpg"
     },
     {
@@ -33,7 +33,7 @@
      "album": "30",
      "artist": "Adele",
      "genre": "Pop",
-     "rating":"Go easy on me, baby.",
+     "lyric":"Go easy on me, baby.",
      "image": "https://upload.wikimedia.org/wikipedia/en/7/76/Adele_-_30.png"
     },
     {
@@ -42,7 +42,7 @@
      "album": "X&Y",
      "artist": "Coldplay",
      "genre": "Alternative",
-     "rating":"When you try your best but you don't succeed",
+     "lyric":"When you try your best but you don't succeed",
      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Coldplay_X%26Y.svg/1200px-Coldplay_X%26Y.svg.png"
     },
     {
@@ -51,7 +51,7 @@
      "album": "VHS",
      "artist": "X Ambassadors",
      "genre": "Alternative",
-     "rating":"Hold on to me, cause I'm a little unsteady.",
+     "lyric":"Hold on to me, cause I'm a little unsteady.",
      "image": "https://upload.wikimedia.org/wikipedia/en/d/d8/VHS_X_ambassadors.jpg"
     },
     {
@@ -60,7 +60,7 @@
      "album": "Me Against the World",
      "artist": "Tupac",
      "genre": "Rap",
-     "rating":"Lady, don't you know we love you.",
+     "lyric":"Lady, don't you know we love you.",
      "image": "https://upload.wikimedia.org/wikipedia/en/3/3d/Meagainsttheworldcover.jpg"
     },
     {
@@ -69,7 +69,7 @@
      "album": "2014 Forest Hills Drive",
      "artist": "J.Cole",
      "genre": "Rap",
-     "rating":"Don't save her, she don't wanna be saved.",
+     "lyric":"Don't save her, she don't wanna be saved.",
      "image": "https://upload.wikimedia.org/wikipedia/en/2/2a/2014ForestHillsDrive.jpg"
     }
  ]

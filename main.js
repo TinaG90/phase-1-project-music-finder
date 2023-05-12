@@ -4,10 +4,7 @@ fetch("http://localhost:3000/music")
 );
 
 
-// const songs = document.getElementById('musicBlock')
-
 function createSongCard(song){
-    console.log(song)
    let card = document.createElement('div');
    card.classList.add('card')
    
@@ -15,6 +12,22 @@ function createSongCard(song){
    img.src = song.image;
    img.classList.add('album-cover');
 
-   card.append(img)
-   document.getElementById
+   let h2 = document.createElement('h2')
+   h2.innerText = `"${song.album}"`;
+   let h5 = document.createElement('h5')
+   h5.innerText = song.genre
+   let h3 = document.createElement('h3')
+   h3.innerText = `Artist: ${song.artist}`
+  
+   let button = document.createElement('button')
+   button.addEventListener('click', ()=>{
+    let list = document.querySelector(".quantity")
+    list.innerText += 1
+   })
+   button.classList.add('favorites-btn')
+   button.id = song.id
+   button.innerText = "Favorite"
+
+   card.append(img,h2,h5,h3,button)
+   document.getElementById('musicContainer').appendChild(card)
 }
