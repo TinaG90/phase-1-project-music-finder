@@ -3,16 +3,18 @@ fetch("http://localhost:3000/music")
 .then(music => music.forEach(song => createSongCard(song))
 );
 
-    // const songs = document.getElementById('musicBlock')
 
-function createSongCard(){
-   let card = document.createElement('div');
-   card.classList.add('card')
+// const songs = document.getElementById('musicBlock')
 
-   let img = document.createElement('img')
-   img.src = music.image;
-   img.classList.add('album-cover');
+function createSongCard(song){
+    console.log(song)
+//    let card = document.createElement('div');
+//    card.classList.add('card')
 
-   card.append(img)
-   document.getElementById
+//    let img = document.createElement('img')
+//    img.src = music.image;
+//    img.classList.add('album-cover');
+
+//    card.append(img)
+//    document.getElementById
 }
