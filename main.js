@@ -22,14 +22,24 @@ function createSongCard(song){
    let h3 = document.createElement('h3')
    h3.innerText = `Artist: ${song.artist}`
 
-   let button = document.createElement('button')
-   button.addEventListener('click', ()=>{
-    list.innerText += 1
+   let span = document.createElement('span')
+   span.classList.add('heart-icon')
+   span.innerText = emptyHeart
+   span.addEventListener('click', (e) => {
+      changeHeart(e);
    })
-   button.classList.add('like-btn')
-   button.id = song.id
-   button.innerText = "Like ❤️"
 
-   card.append(img,h2,h5,h3,button)
-   document.getElementById('musicContainer').appendChild(card)
+   card.append(img,h2,h5,h3,span)
+   document.getElementById('music-container').appendChild(card)
 }
+
+function changeHeart(event) {
+   const liker = event.target
+   if (liker.textContent === emptyHeart) {
+     liker.textContent = fullHeart;
+     liker.classList.add("activated-heart");
+   } else if ((liker.textContent = fullHeart)) {
+     liker.textContent = emptyHeart;
+     liker.classList.remove("activated-heart");
+   }
+ }
