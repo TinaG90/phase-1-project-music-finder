@@ -13,7 +13,6 @@ function createSongCard(song){
 
    let p = document.createElement('p');
    p.id = "lyrics"
-   // p.classList.add('hidden')
    p.innerText = `"${song.lyric}"`
 
 
@@ -21,7 +20,7 @@ function createSongCard(song){
    img.src = song.image;
    img.classList.add('album-cover');
    img.addEventListener('mouseover', () => {
-
+      console.log("the mouse was here")
    })
 
    let h2 = document.createElement('h2')
@@ -51,5 +50,14 @@ function changeHeart(event) {
    } else if ((liker.textContent = fullHeart)) {
      liker.textContent = emptyHeart;
      liker.classList.remove("activated-heart");
+   }
+ }
+
+ function mouseOverEvent(event){
+   let words = event.target
+   if (words.style.display === "none"){
+      words.style.display = "block";
+   } else {
+      words.style.display = "none";
    }
  }
