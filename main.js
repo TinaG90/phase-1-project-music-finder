@@ -11,16 +11,17 @@ function createSongCard(song){
    let card = document.createElement('div');
    card.classList.add('card')
 
-   let p = document.createElement('p');
+   let p = document.createElement('p')
+   p.style.visibility = ""
    p.id = "lyrics"
    p.innerText = `"${song.lyric}"`
-
 
    let img = document.createElement('img')
    img.src = song.image;
    img.classList.add('album-cover');
-   img.addEventListener('mouseover', () => {
-      console.log("the mouse was here")
+
+   img.addEventListener("mouseover", (e) => {
+      lyricDisplay(e)
    })
 
    let h2 = document.createElement('h2')
@@ -37,7 +38,7 @@ function createSongCard(song){
       changeHeart(e);
    })
 
-   card.append(img,h2,h5,h3,span,p)
+   card.append(h2,h5,img,h3,span,p)
    document.getElementById('music-container').appendChild(card)
 }
 
@@ -53,11 +54,12 @@ function changeHeart(event) {
    }
  }
 
- function mouseOverEvent(event){
-   let words = event.target
-   if (words.style.display === "none"){
-      words.style.display = "block";
-   } else {
-      words.style.display = "none";
-   }
- }
+function lyricDisplay(){
+  let words = document.getElementById('lyrics')
+  
+      if (words.style.display === "none") {
+        words.style.display = "block";
+      } else {
+        words.style.display = "none";
+      }
+}
