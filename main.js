@@ -3,6 +3,9 @@ fetch("http://localhost:3000/music")
 .then(music => music.forEach(song => createSongCard(song))
 );
 
+const emptyHeart = '♡'
+const fullHeart = '♥'
+
 
 function createSongCard(song){
    let card = document.createElement('div');
@@ -18,15 +21,14 @@ function createSongCard(song){
    h5.innerText = song.genre
    let h3 = document.createElement('h3')
    h3.innerText = `Artist: ${song.artist}`
-  
+
    let button = document.createElement('button')
    button.addEventListener('click', ()=>{
-    let list = document.querySelector(".quantity")
     list.innerText += 1
    })
-   button.classList.add('favorites-btn')
+   button.classList.add('like-btn')
    button.id = song.id
-   button.innerText = "Favorite"
+   button.innerText = "Like ❤️"
 
    card.append(img,h2,h5,h3,button)
    document.getElementById('musicContainer').appendChild(card)
