@@ -10,13 +10,22 @@ const fullHeart = '♥'
 function createSongCard(song){
    let card = document.createElement('div');
    card.classList.add('card')
-   
+
+   let p = document.createElement('p');
+   p.id = "lyrics"
+   // p.classList.add('hidden')
+   p.innerText = `"${song.lyric}"`
+
+
    let img = document.createElement('img')
    img.src = song.image;
    img.classList.add('album-cover');
+   img.addEventListener('mouseover', () => {
+
+   })
 
    let h2 = document.createElement('h2')
-   h2.innerText = `"${song.album}"`;
+   h2.innerText = song.album
    let h5 = document.createElement('h5')
    h5.innerText = song.genre
    let h3 = document.createElement('h3')
@@ -29,10 +38,11 @@ function createSongCard(song){
       changeHeart(e);
    })
 
-   card.append(img,h2,h5,h3,span)
+   card.append(img,h2,h5,h3,span,p)
    document.getElementById('music-container').appendChild(card)
 }
 
+// Event Handlers Functions(callbacks)
 function changeHeart(event) {
    const liker = event.target
    if (liker.textContent === emptyHeart) {
