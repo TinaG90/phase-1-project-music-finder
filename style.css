@@ -3,9 +3,15 @@
     padding: 0;
     margin: 0;
 }
+.topBanner {
+    display: flex;
+    justify-content:center;
+    height: 100px;
+    background-color: rgb(212, 185, 48);
+}
 
 body {
-    background-color: gainsboro;
+    background-color: white;
 }
 
 .music-container {
@@ -13,16 +19,38 @@ body {
     justify-content: center;
 }
 .card {
-    border: 5px solid rgb(110, 16, 16);
-    background-color: white;
+    border: 3px solid rgb(53, 184, 227);
+    background-color: lightgray;
     width: 220px;
     height: 400px;
     margin: 10px;
+    border-radius: 15px;
 }
 .album-cover {
     height: 170px;
     margin-bottom: 15px;
-    background-size: cover;
-    
+    margin-left: 17px;
+    background-size: cover;    
+}
+
+.card h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.card h5 {
+    display: flex;
+    justify-content: center;
+}
+.card h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.card span {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 

@@ -46,7 +46,7 @@ function createSongCard(MusicData){
       changeHeart(e);
    })
 
-   card.append(h2,h5,img,p,h3,span)
+   card.append(h2,img,h5,h3,span,p)
    document.querySelector('.music-container').appendChild(card)
    return {genre:song.genre, element: card}
   })
