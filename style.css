@@ -1,20 +1,28 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background-color: gainsboro;
 }
 
-.topBanner {
-    background-color: burlywood;
+.music-container {
+    display: flex;
+    justify-content: center;
 }
-
-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: .25rem;
-    margin-top: 1rem;
-}
-
 .card {
-    border: 1px solid black;
+    border: 5px solid rgb(110, 16, 16);
     background-color: white;
-    padding: .5rem;
+    width: 220px;
+    height: 400px;
+    margin: 10px;
 }
+.album-cover {
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    
+}
+

@@ -13,7 +13,7 @@ function createSongCard(MusicData){
 
    let card = document.createElement('div');
    card.classList.add('card')
-   card.style.visibility = "hidden"
+   card.style.display = "none"
     
    let p = document.createElement('p')
    p.style.visibility = "hidden"
@@ -28,7 +28,6 @@ function createSongCard(MusicData){
    img.addEventListener("mouseover", (e) => {
     p.style.visibility = "visible"
     })
-
    img.addEventListener("mouseout", (e) => {
     p.style.visibility = "hidden"
  })
@@ -72,7 +71,7 @@ function changeHeart(event) {
     genresSearch.forEach(genre => {
       const isVisible = genre.genre.toLowerCase()
       if (isVisible !== value){
-        genre.element.style.visibility ="hidden"
-      } else { genre.element.style.visibility = "visible"}
+        genre.element.style.display ="none"
+      } else { genre.element.style.display = "block"}
      })
  })
