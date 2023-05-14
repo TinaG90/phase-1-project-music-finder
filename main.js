@@ -1,7 +1,10 @@
+const fetchRequest = ()=> {
 fetch("http://localhost:3000/music")
 .then(resp => resp.json())
 .then(music => music.forEach(song => createSongCard(song))
 );
+}
+fetchRequest()
 
 const emptyHeart = '♡'
 const fullHeart = '♥'
@@ -12,8 +15,9 @@ function createSongCard(song){
    card.classList.add('card')
 
    let p = document.createElement('p')
-   p.style.visibility = ""
-   p.id = "lyrics"
+   p.style.visibility = "hidden"
+   p.id = `${song.id}`
+   p.classList.add('lyrics')
    p.innerText = `"${song.lyric}"`
 
    let img = document.createElement('img')
@@ -55,11 +59,8 @@ function changeHeart(event) {
  }
 
 function lyricDisplay(){
-  let words = document.getElementById('lyrics')
-  
-      if (words.style.display === "none") {
-        words.style.display = "block";
-      } else {
-        words.style.display = "none";
-      }
+   const words = document.querySelectorAll('.lyrics')
+    for (let i = 0; i < words.length; i++) {
+    words[i].style.visibility = 'visible';
 }
+lyricDisplay()
