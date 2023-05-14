@@ -1,8 +1,9 @@
 const fetchRequest = ()=> {
 fetch("http://localhost:3000/music")
 .then(resp => resp.json())
-.then(music => music.forEach(song => createSongCard(song))
-);
+.then(music => { createSongCard(music)
+  // console.log(music)
+})
 }
 fetchRequest()
 
@@ -10,10 +11,12 @@ const emptyHeart = '♡'
 const fullHeart = '♥'
 
 
-function createSongCard(song){
+function createSongCard(MusicData){
+  MusicData.forEach(song => {
+
    let card = document.createElement('div');
    card.classList.add('card')
-
+    
    let p = document.createElement('p')
    p.style.visibility = "hidden"
    p.id = `${song.id}`
@@ -25,8 +28,15 @@ function createSongCard(song){
    img.classList.add('album-cover');
 
    img.addEventListener("mouseover", (e) => {
-      lyricDisplay(e)
-   })
+    p.style.visibility = "visible"
+      // lyricDisplay()
+    })
+
+   img.addEventListener("mouseout", (e) => {
+    p.style.visibility = "hidden"
+
+    // lyricHider()
+ })
 
    let h2 = document.createElement('h2')
    h2.innerText = song.album
@@ -42,9 +52,11 @@ function createSongCard(song){
       changeHeart(e);
    })
 
-   card.append(h2,h5,img,h3,span,p)
+   card.append(h2,h5,img,p,h3,span)
    document.getElementById('music-container').appendChild(card)
+  })
 }
+
 
 // Event Handlers Functions(callbacks)
 function changeHeart(event) {
@@ -58,9 +70,16 @@ function changeHeart(event) {
    }
  }
 
-function lyricDisplay(){
-   const words = document.querySelectorAll('.lyrics')
-    for (let i = 0; i < words.length; i++) {
-    words[i].style.visibility = 'visible';
-}
-lyricDisplay()
+// function lyricDisplay(){
+//    const words = document.querySelectorAll('.lyrics')
+//     for (let i = 0; i < words.length; i++) {
+//     words[i].style.visibility = 'visible';
+// }
+// }
+
+// function lyricHider(){
+//   const words = document.querySelectorAll('.lyrics')
+//    for (let i = 0; i < words.length; i++) {
+//    words[i].style.visibility = 'hidden';
+// }
+// }
