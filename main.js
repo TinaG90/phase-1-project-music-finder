@@ -35,7 +35,6 @@ function createSongCard(MusicData){
 
    img.addEventListener("mouseout", (e) => {
     p.style.visibility = "hidden"
-
     // lyricHider()
  })
 
@@ -71,9 +70,20 @@ function changeHeart(event) {
    }
  }
 
-//  function searchButtonRender(){
-//     if(music.genre === )
-//  }
+
+
+ function searchButtonRender(){
+  const searchButton = document.getElementsByTagName('input')[1]
+    .addEventListener('click',(event) => {
+    event.preventDefault()
+    const input = document.getElementsByTagName('input')[0]
+    const searchInput = input.value
+
+    
+    })
+  }
+
+ searchButtonRender()
 
 // function lyricDisplay(){
 //    const words = document.querySelectorAll('.lyrics')
