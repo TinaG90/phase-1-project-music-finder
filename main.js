@@ -6,13 +6,14 @@ fetch("http://localhost:3000/music")
 
 const emptyHeart = '♡'
 const fullHeart = '♥'
-let genreSearch = []
+let genresSearch = []
 
 function createSongCard(MusicData){
-  genreSearch = MusicData.map(song => {
+  genresSearch = MusicData.map(song => {
 
    let card = document.createElement('div');
    card.classList.add('card')
+   card.style.visibility = "hidden"
     
    let p = document.createElement('p')
    p.style.visibility = "hidden"
@@ -26,12 +27,10 @@ function createSongCard(MusicData){
 
    img.addEventListener("mouseover", (e) => {
     p.style.visibility = "visible"
-      // lyricDisplay()
     })
 
    img.addEventListener("mouseout", (e) => {
     p.style.visibility = "hidden"
-    // lyricHider()
  })
 
    let h2 = document.createElement('h2')
@@ -49,8 +48,8 @@ function createSongCard(MusicData){
    })
 
    card.append(h2,h5,img,p,h3,span)
-   document.getElementById('music-container').appendChild(card)
-   return (card)
+   document.querySelector('.music-container').appendChild(card)
+   return {genre:song.genre, element: card}
   })
 }
 
@@ -69,22 +68,11 @@ function changeHeart(event) {
 
  const searchInput = document.querySelector('input')
  searchInput.addEventListener("input", (e) => {
-    const value = e.target.value
-    console.log(genreSearch)
+    const value = e.target.value.toLowerCase()
+    genresSearch.forEach(genre => {
+      const isVisible = genre.genre.toLowerCase()
+      if (isVisible !== value){
+        genre.element.style.visibility ="hidden"
+      } else { genre.element.style.visibility = "visible"}
+     })
  })
-
-
-
-// function lyricDisplay(){
-//    const words = document.querySelectorAll('.lyrics')
-//     for (let i = 0; i < words.length; i++) {
-//     words[i].style.visibility = 'visible';
-// }
-// }
-
-// function lyricHider(){
-//   const words = document.querySelectorAll('.lyrics')
-//    for (let i = 0; i < words.length; i++) {
-//    words[i].style.visibility = 'hidden';
-// }
-// }
