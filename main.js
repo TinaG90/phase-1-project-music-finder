@@ -2,15 +2,13 @@ const fetchRequest = ()=> {
 fetch("http://localhost:3000/music")
 .then(resp => resp.json())
 .then(music => { 
-  createSongCard(music)
-  // console.log(music)
+  genreSearch = createSongCard(music)
 })
 }
 fetchRequest()
-
 const emptyHeart = '♡'
 const fullHeart = '♥'
-
+let genreSearch = []
 
 function createSongCard(MusicData){
   MusicData.forEach(song => {
@@ -48,7 +46,7 @@ function createSongCard(MusicData){
    let span = document.createElement('span')
    span.classList.add('heart-icon')
    span.innerText = emptyHeart
-   span.addEventListener('dblclick', (e) => {
+   span.addEventListener('click', (e) => {
       changeHeart(e);
    })
 
@@ -70,20 +68,13 @@ function changeHeart(event) {
    }
  }
 
+ const searchInput = document.querySelector('input')
+ searchInput.addEventListener("input", (e) => {
+    const value = e.target.value
+    console.log(value)
+ })
 
 
- function searchButtonRender(){
-  const searchButton = document.getElementsByTagName('input')[1]
-    .addEventListener('click',(event) => {
-    event.preventDefault()
-    const input = document.getElementsByTagName('input')[0]
-    const searchInput = input.value
-
-    
-    })
-  }
-
- searchButtonRender()
 
 // function lyricDisplay(){
 //    const words = document.querySelectorAll('.lyrics')
