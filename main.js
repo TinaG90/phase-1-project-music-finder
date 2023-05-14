@@ -1,17 +1,15 @@
-const fetchRequest = ()=> {
 fetch("http://localhost:3000/music")
 .then(resp => resp.json())
 .then(music => { 
-  genreSearch = createSongCard(music)
+  createSongCard(music)
 })
-}
-fetchRequest()
+
 const emptyHeart = '♡'
 const fullHeart = '♥'
 let genreSearch = []
 
 function createSongCard(MusicData){
-  MusicData.forEach(song => {
+  genreSearch = MusicData.map(song => {
 
    let card = document.createElement('div');
    card.classList.add('card')
@@ -52,6 +50,7 @@ function createSongCard(MusicData){
 
    card.append(h2,h5,img,p,h3,span)
    document.getElementById('music-container').appendChild(card)
+   return (card)
   })
 }
 
@@ -71,7 +70,7 @@ function changeHeart(event) {
  const searchInput = document.querySelector('input')
  searchInput.addEventListener("input", (e) => {
     const value = e.target.value
-    console.log(value)
+    console.log(genreSearch)
  })
 
 
