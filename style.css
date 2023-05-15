@@ -33,10 +33,10 @@ body {
     background-size: cover;    
 }
 
-.card h3 {
+/* .card h3 {
     display: flex;
     justify-content: center;
-}
+} */
 
 .card h5 {
     display: flex;
