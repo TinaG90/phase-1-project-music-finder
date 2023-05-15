@@ -1,2 +1,4 @@
 # phase-1-project-music-finder
+
 An app that allows you to find music by genre or artist.
+first you will need to run th json server.
