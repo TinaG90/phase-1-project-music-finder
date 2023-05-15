@@ -1,8 +1,8 @@
-/* * {
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-} */
+}
 .topBanner {
     display: flex;
     justify-content:center;
@@ -10,10 +10,10 @@
     background-color: rgb(212, 185, 48);
     padding: 15px;
 }
-
+/* 
 body {
     background-color: white;
-}
+} */
 
 .music-container {
     display: flex;
