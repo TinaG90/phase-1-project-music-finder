@@ -45,13 +45,11 @@ function createSongCard(MusicData){
    span.addEventListener('click', (e) => {
       changeHeart(e);
    })
-
    card.append(h2,img,h5,h3,span,p)
    document.querySelector('.music-container').appendChild(card)
    return {genre:song.genre, element: card}
   })
 }
-
 
 // Event Handlers Functions(callbacks)
 function changeHeart(event) {
@@ -64,14 +62,24 @@ function changeHeart(event) {
      liker.classList.remove("activated-heart");
    }
  }
-
+ 
  const searchInput = document.querySelector('input')
  searchInput.addEventListener("input", (e) => {
     const value = e.target.value.toLowerCase()
     genresSearch.forEach(genre => {
-      const isVisible = genre.genre.toLowerCase()
-      if (isVisible !== value){
+    const isVisible = genre.genre.toLowerCase()
+     if (isVisible !== value){
         genre.element.style.display ="none"
-      } else { genre.element.style.display = "block"}
-     })
- })
+         } else {
+          genre.element.style.display = "block"
+       }
+  })
+})
+searchInput.addEventListener("keydown",(event) =>{
+  if (event.key === "Enter" ){
+    inputAlert()}
+  })
+
+function inputAlert(){
+  alert('No Genre Found!')
+}

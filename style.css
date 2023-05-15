@@ -8,6 +8,7 @@
     justify-content:center;
     height: 100px;
     background-color: rgb(212, 185, 48);
+    padding: 15px;
 }
 
 body {
@@ -22,7 +23,6 @@ body {
     border: 3px solid rgb(53, 184, 227);
     background-color: lightgray;
     width: 220px;
-    height: 400px;
     margin: 10px;
     border-radius: 15px;
 }
@@ -41,6 +41,7 @@ body {
 .card h5 {
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 .card h2 {
     display: flex;
@@ -50,7 +51,13 @@ body {
 .card span {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     margin-top: 15px;
+
+}
+.card p {
+    display: flex;
+    justify-content: center;
+    padding: 7px;
 }
 
