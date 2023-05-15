@@ -75,10 +75,10 @@ function changeHeart(event) {
        }
   })
 })
-searchInput.addEventListener("keydown",(event) =>{
-  if (event.key === "Enter" ){
-    inputAlert()}
-  })
+// searchInput.addEventListener("keydown",(event) =>{
+//   if (event.key === "Enter" ){
+//     inputAlert()}
+//   })
 
 function inputAlert(){
   alert('No Genre Found!')
