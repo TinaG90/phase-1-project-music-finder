@@ -18,8 +18,8 @@ After the user loads the page, they can then begin typing a specific music genre
 
 ## Credits
 
-Images are sourced form www.wiki.com
-Album information is from apple music platform
+- Images are sourced form https://www.wikipedia.org
+- Album information is from apple music platform (https://www.apple.com/apple-music/)
 
 ## Contributing
 
