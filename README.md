@@ -2,11 +2,11 @@
 
 ## Overview
 
-This is a single page application that allows a user to search for music by genre. The app will then display cards of the specified genre which includes information about the albums.
+This is a single page application that allows a user to search for music by genre. The app will then display cards of that specified genre which includes information about the albums.
 
 ## Installation
 
-To install and operate this application user will need to clone this repo and make sure json server is running by typing json-server --watch db.json in your terminal. All data in this project's JSON is unique to this project, and it does not pull data from an API
+To install and operate this application user will need to clone this repo and make sure json server is running by typing json-server --watch db.json in your terminal. All data in this project's JSON is unique to this project, and it does not pull data from an API. User can then open the index.html in the browser.
 
 ```
 $ json-server --watch db.json
@@ -18,8 +18,8 @@ After the user loads the page, they can then begin typing a specific music genre
 
 ## Credits
 
-- Images are sourced form https://www.wikipedia.org
-- Album information is from apple music platform (https://www.apple.com/apple-music/)
+- Images are sourced form https://www.wikipedia.org.
+- Album information is from Apple Music platform (https://www.apple.com/apple-music/).
 
 ## Contributing
 
